@@ -1,6 +1,7 @@
 Given(/^I am on dubizzle (dubai|egypt) home page$/) do |local|
-  @homepage=HomePage.new(driver).go_to(local)
-  expect {@homepage.is_current_page?(local)}.to be_true
+  @homepage = HomePage.new(driver).go_to(local)
+  is_title_correct = @homepage.is_current_page?(local)
+  is_title_correct.should == true
 end
 When(/^I check for content$/) do
 #  Do nothing

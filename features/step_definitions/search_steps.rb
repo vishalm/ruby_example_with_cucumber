@@ -34,5 +34,5 @@ end
 
 Then(/^I should see last item have minimum (\d+) bathroom$/) do |expected_count|
   actual_count = @homepage.get_bathroom_count.to_i
-  expect {expected_count <= actual_count}.to be_true
+  (expected_count.to_i <= actual_count).should == true
 end

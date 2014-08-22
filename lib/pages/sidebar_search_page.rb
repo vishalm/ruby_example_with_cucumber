@@ -35,20 +35,24 @@ module Automation
     end
 
     def select_from_drop_down id, value
+      begin
       list = driver.find_element(:id, id).find_elements(:css, 'option')
       list.each do |item|
          if item.text == value
             item.click
          end
       end
+      rescue Exception => e
+        #Do Nothing
+        puts "#{e}"
+      end
+
     end
 
     def add_neighborhoods value
       neighborhoods.clear
       neighborhoods.send_keys value
-      wait_for_element [:css, "em"]
-      driver.find_element(:css, "em").click
-      wait_for_element [:css, "a.as-close"]
+      driver.find_element(:css, "ul.as-list em").click
     end
 
     def first_time_search
@@ -68,7 +72,7 @@ module Automation
     end
 
     def get_bathroom_count
-      driver.find_element(:xpath, "//div[@id='listing-details-list']/ul/li[3]/strong").text
+      driver.find_element(:xpath, "//div[@id='listing-details-list']/ul/li[2]/strong").text
     end
 
    end
