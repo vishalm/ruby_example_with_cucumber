@@ -1,0 +1,36 @@
+dubizzle - Test Automation Engineer
+Prescreening Assessment
+
+Note: Following is the list of preferred toolset but fell free to pick anything else you are more comfortable with.
+
+- Python
+- Selenium
+- JMeter 
+- monkeytalk
+
+
+Q1: Create a class to perform simple arithmetic and write unit tests for it.
+======DONE========
+
+Q2: Why is test code coverage a good metric and whats are it's shortcoming? 
+To elaborate use the class and tests created in Q1.
+======DONE========
+Q3: How do you think testing in agile context is different then testing in traditional software development processes?
+======DONE========
+
+Q4: Write a load test to upload images to imugr using your account by consuming it's API https://api.imgur.com/
+Note: If you are having trouble in using your account, you can consume the API anonymously.
+===========PENDING===========
+
+Q5: Open dubai.dubizzle.com in your browser and take a look around Now open egypt.dubizzle.com and do the same. 
+Now consider the following scenario and automate it using Selenium or similar tool.
+
+
+"As a user I want the list of least expensive apartment to rent in marina which have at least two bathrooms" 
+
+-- Additionally open the last item in the result set and verify it has two bathrooms 
+-- Bonus points: Refactor the above script to be data driven?
+
+Additional Question for candidates with experience of mobile test automation:
+
+Q6: Which is your favorite open source Android/iOS apps? Automate two of its functional tests.
