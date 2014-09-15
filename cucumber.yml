@@ -1,0 +1,3 @@
+default:  --no-source --format pretty --tags @webdriver
+webdriver:  --no-source --format pretty --tags @webdriver
+non_webdriver:  --no-source --format pretty --tags @simple_calculator
